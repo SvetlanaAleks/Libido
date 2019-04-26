@@ -1,72 +1,46 @@
 .order {
-	padding-top: 93px;
-	padding-bottom: 93px;
+	padding: 60px 0;
 	text-align: center;
+	background: black;
 	&.wave {
 		z-index: 1;
 	}
 	.title {
-		color: #38354a;
-		position: relative;
-		padding-top: 71px;
-		&::before {
-			content: '';
-			display: block;
-			position: absolute;
-			background-image: url(../img/logo.png);
-			width: 51px;
-			height: 56px;
-			top: 0;
-			left: 50%;
-			transform: translateX(-50%);
-
-		}
-	}
-	&__orange-text {
-		color: #ffc60d;
+		font-weight: bold;
 	}
 	&__list {
 		display: flex;
 		margin-top: 17px;
 		justify-content: flex-start;
+		position: relative;
+		&::before{
+			content: '';
+			display: block;
+			position: absolute;
+			left: 330px;
+			top: 110px;
+			width: 498px;
+			height: 92px;
+			background: url('../img/line.png') no-repeat center;
+		}
 	}
 	&__item {
 		max-width: 366px;
 		position: relative;
 		&--1 {
-			margin-top: 80px;
-			margin-right: 80px;
-			margin-left: 36px;
+			margin-top: 62px;
+			margin-right: 90px;
+			margin-left: 76px;
 		}
 		&--2 {
 			margin-top: 40px;
 			margin-right: 70px;
-			&::before {
-				content: '';
-				display: block;
-				position: absolute;
-				width: 1px;
-				height: 180px;
-				background-color: rgba(57, 54, 77, 0.1);
-				top: 23px;
-				left: -39px;
-			}
-			&::after {
-				content: '';
-				display: block;
-				position: absolute;
-				width: 1px;
-				height: 180px;
-				background-color: rgba(57, 54, 77, 0.1);
-				top: -8px;
-				right: -15px;
-			}
 		}
 	}
 	&__count {
 		font-size: 200px;
 		line-height: 1;
-		color: #eaf0f6;
+		color: #1f1f1f;
 		font-weight: 900;
 		position: relative;
 		&-before {
@@ -75,7 +49,7 @@
 			height: 100px;
 			width: 100px;
 			border-radius: 50%;
-			background-color: #fff;
+			background-color: black;
 			left: 0;
 			top: 68px;
 			transform: translateX(-70%);
@@ -109,14 +83,9 @@
 		line-height: 1.1;
 		margin-top: 13px;
 		font-weight: 500;
-	}
-	&__desc {
-		font-size: 18px;
-		line-height: 24px;
-		color: #444;
-		margin-top: 12px;
-		padding-top: 14px;
-		position: relative;	
+		color: #ffffff;
+		position: relative;
+		padding-top: 26px;
 		&::before {
 			content: '';
 			display: block;
@@ -124,14 +93,20 @@
 			height: 3px;
 			width: 30px;
 			height: 3px;
-			background-color: #ffc60d;
+			background-color: #ef694b;
 			top: 0;
 			left: 50%;
 			transform: translateX(-50%);
 		}
 	}
-	
+	&__desc {
+		font-size: 18px;
+		line-height: 24px;
+		color: #a3a3a3;
+		margin-top: 12px;
+	}
 }
+
 
 
 @media screen and (max-width: 1189px) {
@@ -185,8 +160,14 @@
 			font-size: 17px;
 			line-height: 1.3;
 			margin-top: 8px;
-			padding-top: 8px;
 		}
+	}
+	.order__list::before{
+		left: 252px;
+		top: 110px;
+		background-size: contain;
+		width: 448px;
+
 	}
 }
 
@@ -223,11 +204,15 @@
 		}
 		&__title {
 			font-size: 20px;
-			margin-top: -10px;
+			padding-top: 10px;
+			// margin-top: -10px;
 		}
 		&__desc {
 			font-size: 16px;
 		}
+	}
+	.order__list::before{
+		display: none;
 	}
 }
 
@@ -300,93 +285,93 @@
 }
 @keyframes animCountBefore-1 {
 	0% {
-		background-color: #fff;
+		background-color: black;
 	}
 	11% {
-		background-color: #fff;
+		background-color: black;
 	}
 	12% {
-		background-color: #383549;
+		background-color: #49c5bb;
 	}
 	100% {
-		background-color: #383549;
+		background-color: #49c5bb;
 	}
 
 }
 @keyframes animSvgFill-1 {
 	0% {
-		fill: #000;
+		fill: #49c5bb;
 	}
 	11% {
-		fill: #000;
+		fill: #49c5bb;
 	}
 	12% {
-		fill: #ffc60c;
+		fill: #fff;
 	}
 	100% {
-		fill: #ffc60c;
+		fill: #fff;
 	}
 
 }
 
 @keyframes animCountBefore-2 {
 	0% {
-		background-color: #fff;
+		background-color: #000;
 	}
 	24% {
-		background-color: #fff;
+		background-color: #000;
 	}
 	25% {
-		background-color: #383549;
+		background-color: #49c5bb;
 	}
 	100% {
-		background-color: #383549;
+		background-color: #49c5bb;
 	}
 
 }
 @keyframes animSvgFill-2 {
 	0% {
-		fill: #000;
+		fill: #49c5bb;
 	}
 	24% {
-		fill: #000;
+		fill: #49c5bb;
 	}
 	25% {
-		fill: #ffc60c;
+		fill: #fff;
 	}
 	100% {
-		fill: #ffc60c;
+		fill: #fff;
 	}
 
 }
 
 @keyframes animCountBefore-3 {
 	0% {
-		background-color: #fff;
+		background-color: #000;
 	}
 	36% {
-		background-color: #fff;
+		background-color: #000;
 	}
 	37% {
-		background-color: #383549;
+		background-color: #49c5bb;
 	}
 	100% {
-		background-color: #383549;
+		background-color: #49c5bb;
 	}
 
 }
 @keyframes animSvgFill-3 {
 	0% {
-		fill: #000;
+		fill: #49c5bb;
 	}
 	36% {
-		fill: #000;
+		fill: #49c5bb;
 	}
 	37% {
-		fill: #ffc60c;
+		fill: #fff;
 	}
 	100% {
-		fill: #ffc60c;
+		fill: #fff;
 	}
 
 }
