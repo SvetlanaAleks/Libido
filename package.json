@@ -17,5 +17,8 @@
     "gulp-wait": "0.0.2",
     "run-sequence": "^2.2.1",
     "gulp-csso": "^3.0.1"
+  },
+  "dependencies": {
+    "clip-path-polyfill": "^1.0.0"
   }
 }
