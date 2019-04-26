@@ -1,7 +1,155 @@
 .components
 	padding: 60px 0
 	background: black
+	overflow-x: hidden
 	&__title
-		margin-bottom: 12px
+		margin-bottom: 73px
 		font-weight: 900
 		line-height: 48px
+		+r(1023)
+			margin-bottom: 30px
+	&__content
+		margin-bottom: 30px
+		position: relative
+		z-index: 1
+		&:before
+			content: ''
+			display: block
+			position: absolute
+			width: 505px
+			height: 241px
+			border-top: 2px dashed #313131
+			border-left: 2px dashed #313131
+			border-right: 2px dashed #313131
+			border-radius: 50% 50% 0 0 / 100% 100% 0 0
+			background: black
+			top: -50px
+			left: 330px
+			z-index: -1
+			+r(1189)
+				top: -10px
+				left: 280px
+				width: 445px
+				height: 221px
+			+r(1023)
+				display: none
+		.product
+			left: 420px
+			top: -13px
+			position: absolute
+			+r(1189)
+				left: 368px
+				top: 27px
+				width: 320px
+			+r(1023)
+				position: static
+				margin-left: 26px
+		.product-wrap
+			+r(1023)
+				text-align: center
+				margin-bottom: 30px
+	.row
+		display: flex
+		justify-content: space-between
+		&--1
+			margin-bottom: 43px
+			+r(639)
+				margin-bottom: 30px
+		+r(639)
+			flex-direction: column
+	.item
+		max-width: 410px
+		width: 100%
+		display: flex
+		text-align: right
+		align-items: flex-start
+		padding-right: 20px
+		+r(1189)
+			padding-right: 0
+			max-width: 340px
+		+r(1023)
+			flex-direction: row-reverse
+			text-align: left
+			max-width: 370px
+		+r(639)
+			max-width: 100%
+			margin-bottom: 30px
+		&:nth-of-type(2)
+			padding-left: 20px
+			padding-right: 0
+			flex-direction: row-reverse
+			text-align: left
+			+r(1189)
+				padding-left: 0
+			+r(639)
+				margin-bottom: 0
+			.ttl
+				&::before
+					left: 0
+			.item__img
+				margin-right: 15px
+				margin-left: 0
+		&__content
+			margin-top: 4px
+			.ttl
+				font-size: 20px
+				font-weight: 900
+				line-height: 24px
+				color: #ffffff
+				position: relative
+				margin-bottom: 4px
+				&::before
+					content: ''
+					display: block
+					position: absolute
+					width: 30px
+					height: 4px
+					border-radius: 1px
+					background-color: #ef694b
+					top: -15px
+					left: auto
+					right: 0
+					+r(1023)
+						left: 0
+						right: auto
+
+			.text
+				font-weight: 400
+				color: #a3a3a3
+				line-height: 25px
+				font-size: 20px
+				+r(1023)
+					line-height: 22px
+					font-size: 19px
+				+r(767)
+					line-height: 20px
+					font-size: 17px
+		&__img
+			border-radius: 50%
+			border: 3px solid #49c5bb
+			flex-shrink: 0
+			margin-left: 15px
+			margin-right: 0
+			+r(1023)
+				margin-right: 15px
+				margin-left: 0
+	&__result
+		text-align: center
+		color: #c8c7c7
+		font-size: 17px
+		font-style: italic
+		margin-bottom: 40px
+		line-height: 22px
+		+r(767)
+			margin-bottom: 30px
+		+r(639)
+			font-size: 16px
+			line-height: 19px
+			margin-bottom: 25px
+			br
+				display: none
+		.color
+			color: #ef694b
+	&__btn
+		width: 230px
+		margin: auto
