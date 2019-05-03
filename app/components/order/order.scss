@@ -1,40 +1,37 @@
 .order {
-	padding: 60px 0;
+	padding: 60px 0 120px;
 	text-align: center;
-	background: black;
 	&.wave {
 		z-index: 1;
 	}
 	.title {
-		font-weight: bold;
+		font-weight: 900;
 	}
 	&__list {
 		display: flex;
 		margin-top: 17px;
-		justify-content: flex-start;
+		justify-content: space-between;
 		position: relative;
 		&::before{
 			content: '';
 			display: block;
 			position: absolute;
 			left: 330px;
-			top: 110px;
+			top: 72px;
 			width: 498px;
 			height: 92px;
 			background: url('../img/line.png') no-repeat center;
 		}
 	}
 	&__item {
-		max-width: 366px;
+		width: 370px;
+		max-width: 100%;
 		position: relative;
 		&--1 {
 			margin-top: 62px;
-			margin-right: 90px;
-			margin-left: 76px;
 		}
 		&--2 {
-			margin-top: 40px;
-			margin-right: 70px;
+			margin-top: 32px;
 		}
 	}
 	&__count {
@@ -49,10 +46,9 @@
 			height: 100px;
 			width: 100px;
 			border-radius: 50%;
-			background-color: black;
-			left: 0;
+			background-color: #49c5bb;
+			left: -60px;
 			top: 68px;
-			transform: translateX(-70%);
 			svg {
 				max-width: 70%;
 				height: auto;
@@ -63,36 +59,37 @@
 			}
 		}
 		&--1 {
-			left: 15px;
+			left: 47px;
 			svg {
 				max-width: 59px;
 			}
 		}
 		&--2 {
+			left: 36px;
 			svg {
 				max-width: 53px;
 			}
 		}
 		&--3 {
-			left: 6px;
+			left: 37px;
 			
 		}
 	}
 	&__title {
-		font-size: 24px;
+		font-size: 23px;
 		line-height: 1.1;
-		margin-top: 13px;
-		font-weight: 500;
-		color: #ffffff;
+		margin-top: 7px;
+		font-weight: 700;
+		color: #fff;
 		position: relative;
-		padding-top: 26px;
+		padding-top: 25px;
 		&::before {
 			content: '';
 			display: block;
 			position: absolute;
-			height: 3px;
-			width: 30px;
-			height: 3px;
+			width: 34px;
+			height: 4px;
+			border-radius: 3px;
 			background-color: #ef694b;
 			top: 0;
 			left: 50%;
@@ -100,8 +97,8 @@
 		}
 	}
 	&__desc {
-		font-size: 18px;
-		line-height: 24px;
+		font-size: 19px;
+		line-height: 26px;
 		color: #a3a3a3;
 		margin-top: 12px;
 	}
@@ -118,16 +115,15 @@
 		}
 		&__list {
 			justify-content: space-between;
-			flex-wrap: wrap;
 		}
 		&__item {
 			margin-right: 0;
 			margin-left: 0;
 			&--1 {
-				margin-left: 20px;
+				margin-left: 0px;
 			}
 			&--2 {
-				margin-right: 20px;
+				margin-right: 0px;
 				&::after {
 					right: -16px;
 				}
@@ -140,7 +136,7 @@
 			&-before {
 				height: 80px;
 				width: 80px;
-				left: 0;
+				left: -40px;
 			}
 			&--1 svg {
 				max-width: 50px;
@@ -173,6 +169,7 @@
 
 @media screen and (max-width: 1023px) {
 	.order {
+		background-color: #000;
 		.title {
 			padding-top: 55px;
 		}
@@ -192,8 +189,8 @@
 			&-before {
 				height: 60px;
 				width: 60px;
-				top: 50px;
-				left: 5px;
+				top: 40px;
+				left: -35px;
 				svg {
 					max-width: 50%;
 				}
@@ -209,6 +206,9 @@
 		}
 		&__desc {
 			font-size: 16px;
+			br {
+				display: none;
+			}
 		}
 	}
 	.order__list::before{
@@ -218,11 +218,13 @@
 
 @media screen and (max-width: 767px) {
 	.order {
+
 		.title {
 			padding-top: 50px;
 		}
 		&__list {
 			margin-top: 10px;
+			flex-wrap: wrap;
 		}
 	}
 }
@@ -249,7 +251,7 @@
 		&__count {
 			font-size: 100px;
 			&-before {
-				top: 40px;
+				top: 35px;
 				height: 50px;
 				width: 50px;
 			}
@@ -257,136 +259,3 @@
 	}
 }
 
-
-
-
-// animation
-.order__count {
-	&-before {
-		&--1 {
-			animation: animCountBefore-1 4s infinite;
-			.st0{
-				animation: animSvgFill-1 4s infinite;
-			}
-		}
-		&--2 {
-			animation: animCountBefore-2 4s infinite;
-			.st0{
-				animation: animSvgFill-2 4s infinite;
-			}
-		}
-		&--3 {
-			animation: animCountBefore-3 4s infinite;
-			.st0{
-				animation: animSvgFill-3 4s infinite;
-			}
-		}
-	}
-}
-@keyframes animCountBefore-1 {
-	0% {
-		background-color: black;
-	}
-	11% {
-		background-color: black;
-	}
-	12% {
-		background-color: #49c5bb;
-	}
-	100% {
-		background-color: #49c5bb;
-	}
-
-}
-@keyframes animSvgFill-1 {
-	0% {
-		fill: #49c5bb;
-	}
-	11% {
-		fill: #49c5bb;
-	}
-	12% {
-		fill: #fff;
-	}
-	100% {
-		fill: #fff;
-	}
-
-}
-
-@keyframes animCountBefore-2 {
-	0% {
-		background-color: #000;
-	}
-	24% {
-		background-color: #000;
-	}
-	25% {
-		background-color: #49c5bb;
-	}
-	100% {
-		background-color: #49c5bb;
-	}
-
-}
-@keyframes animSvgFill-2 {
-	0% {
-		fill: #49c5bb;
-	}
-	24% {
-		fill: #49c5bb;
-	}
-	25% {
-		fill: #fff;
-	}
-	100% {
-		fill: #fff;
-	}
-
-}
-
-@keyframes animCountBefore-3 {
-	0% {
-		background-color: #000;
-	}
-	36% {
-		background-color: #000;
-	}
-	37% {
-		background-color: #49c5bb;
-	}
-	100% {
-		background-color: #49c5bb;
-	}
-
-}
-@keyframes animSvgFill-3 {
-	0% {
-		fill: #49c5bb;
-	}
-	36% {
-		fill: #49c5bb;
-	}
-	37% {
-		fill: #fff;
-	}
-	100% {
-		fill: #fff;
-	}
-
-}
-
-
-
-// remove animation for fucking IE
-
-@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-	.order__count {
-		&-before {
-			animation: none;
-			.st0{
-				animation: none;
-			}
-		}
-	}
-}

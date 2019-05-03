@@ -1,2 +1,3 @@
 
-//=include ../components/footer/footer.js
+//=include ../components/reviews/reviews.js
+//=include ../components/up/up.js

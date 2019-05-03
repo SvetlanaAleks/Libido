@@ -5,13 +5,19 @@ body
 	font-size: 14px
 	overflow-x: hidden
 
+html
+	overflow-x: hidden
+
 img
 	max-width: 100%
-
+br
+	line-height: 0
 svg
 	overflow: hidden
 
 .container
+	position: relative
+	z-index: 2
 	width: 100%
 	margin: 0 auto
 	padding: 0 10px
@@ -70,6 +76,7 @@ a
 	border: 0
 	outline: none
 .block
+	position: relative
 	+r(1023)
 		padding: 40px 0
 	+r(767)
@@ -91,3 +98,97 @@ a
 	line-height: 22px
 	cursor: pointer
 	text-align: center
+
+.line
+	width: 8px
+	height: 40px
+	border-radius: 4px
+	background-color: #49c5bb
+	position: absolute
+	z-index: 3
+	top: 0
+	left: 50%
+	transform: translate(-50%, -50%)
+	&-orange
+		background-color: #ef694b
+	&-advan
+		top: -10px
+	&-components
+		top: -10px
+	&-order
+		top: -80px
+.overlay
+	position: absolute
+	width: 150%
+	height: 150%
+	top: 0
+	left: 50%
+	transform: translateX(-50%) rotate(-10.5deg)
+	overflow: hidden
+	+r(1023)
+		display: none
+	&-header
+		top: -515px
+	&-bed
+		background-color: #000
+		&::before
+			content: ''
+			position: absolute
+			width: 100%
+			height: 100%
+			background-image: url('../img/bed-bg.png')
+			background-repeat: no-repeat
+			background-position: center bottom
+			opacity: .9
+			left: 50%
+			transform: translateX(-50%) rotate(10.5deg)
+			bottom: -360px
+
+	&-ld
+		top: -80px
+		background-color: #343434
+		&::before
+			content: ''
+			position: absolute
+			width: 100%
+			height: 100%
+			background-image: url('../img/lb-bg.png')
+			background-repeat: repeat
+			background-position: center bottom
+			left: 50%
+			transform: translateX(-50%) rotate(10.5deg)
+			top: -190px
+			opacity: 0.1
+	&-advan
+		&::before
+			bottom: 360px
+			background-position: right calc(50% - -200px) bottom
+			transform: translateX(-50%) rotate(10.5deg) scaleX(-1)
+	&-components
+		&::before
+			bottom: 155px
+			background-position: right calc(50% + 150px) bottom
+	&-order
+		background-image: none
+		top: -70px
+		&::before
+			display: none
+	&-header-bottom
+		z-index: 2
+		top: 8px
+		height: 97%
+		max-width: 3100px
+		&::before
+			content: ''
+			position: absolute
+			width: 100%
+			height: 170%
+			background-repeat: no-repeat
+			background-image: url(../img/bed-bg.png)
+			background-position: right calc(50% + 260px) bottom 180px
+			opacity: 0.45
+			left: 50%
+			transform: translateX(-50%) rotate(10.5deg) scaleX(-1)
+			bottom: -320px
+
+
