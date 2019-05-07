@@ -1,0 +1,222 @@
+.nowrap
+  white-space: nowrap
+  
+  
+.industry
+  padding: 25px 0 155px
+  +r(1189)
+    padding-top: 0
+  +r(1023)
+    background-color: #343434
+    
+.industry__title 
+  font-weight: 900
+  line-height: 1
+  margin-bottom: 20px
+  
+
+.industry__descr
+  margin-bottom: 50px
+  color: #e5e4e4
+  font-weight: 500
+  text-align: center
+  line-height: 1.3
+  font-size: 22px
+  
+.accent-color
+  color: #49c5bb
+
+.bold-weight
+  font-weight: bold
+
+.industry__head
+  position: relative
+  background-color: #4d4c4c
+  border-top: 3px solid #ef694b
+  padding-top: 170px
+  padding-bottom: 35px
+  margin-bottom: 40px
+
+.industry__head:after
+  width: 12px
+  height: 44px
+  position: absolute
+  content: ""
+  background-image: url(../img/industry-tab.png)
+  bottom: -22px
+  left: 50%
+  transform: translate(-50%)
+
+.industry__slide
+  position: relative
+  padding-top: 20px
+  margin: 0 15px
+  padding-bottom: 50px
+
+.industry__photo
+  position: absolute
+  top: -20px
+  left: 50%
+  transform: translate(-50%)
+
+.industry__photo img
+  border-radius: 50%  
+
+.industry__prof
+  position: relative
+  font-size: 24px
+  font-weight: 500
+  color: #fff
+  padding-bottom: 20px
+  margin-bottom: 15px
+  text-align: center
+
+.industry__prof:after
+  position: absolute
+  content: ""
+  bottom: 0
+  left: 50%
+  width: 40px
+  height: 4px
+  background-color: #49c5bb
+  transform: translate(-50%)
+
+.industry__status
+  font-style: italic
+  font-size: 17px
+  color: #fff
+  text-align: center
+
+.industry__text
+  color: #ecebeb 
+  font-size: 18px
+  text-align: center
+  line-height: 1.6
+  padding: 0 25px
+  
+
+.industry__button 
+  position: absolute
+  bottom: 5px
+  left: 50%
+  transform: translate(-50%)
+  display: flex
+  align-items: center
+  justify-content: center
+  width: 35px
+  height: 35px
+  border-radius: 50%
+  background-color: #49c5bb
+  color: #ffffff
+  font-size: 25px
+  cursor: pointer  
+
+.industry__button.open
+  background-color: #ef694b
+
+.industry__more-text
+  display: none
+
+.industry__first
+  padding-top: 60px
+
+.industry__second
+  padding-top: 30px
+
+
+.industry__wrap
+  position: relative 
+
+.industry__arrows
+  width: 100%
+  position: absolute
+  top: 210px
+  left: 0
+  display: flex
+  justify-content: space-between
+
+.industry__arrow
+  cursor: pointer
+  padding: 0
+  width: 55px
+  height: 40px
+  background-color: transparent
+
+.industry__arrow-icon
+  fill: #6e6a6a
+
+.industry__arrow-icon:hover
+  fill: #ef694b
+
+
+
+@media (max-width: 1189px)
+  .industry__text
+    padding: 0 15px
+
+  .industry__arrow 
+    width: 40px
+
+  .industry__arrow-prev
+    left: 10px
+
+  .industry__arrow-next
+    right: 10px
+
+  .industry__slide
+    margin: 0 5px
+
+  .industry__descr
+    margin-bottom: 30px
+    font-size: 20px
+
+
+@media (max-width: 1024px)
+  .industry__first
+    padding-top: 0px
+
+  .industry__second
+    padding-top: 0px
+
+  .industry__wrap
+    padding: 0 50px
+
+  .industry__descr
+    font-size: 18px  
+
+@media (max-width: 769px)
+  .industry__descr
+    font-size: 17px
+
+  .industry__text
+    padding: 0
+    font-size: 17px
+    line-height: 1.5
+
+@media (max-width: 640px)
+  .industry__descr
+    margin-bottom: 35px
+
+  .industry__prof
+    font-size: 22px
+
+  .industry__photo
+    max-width: 150px
+
+  .industry__head
+    padding-top: 150px  
+
+@media (max-width: 420px)
+  .industry__arrows
+    display: none
+
+  .industry__wrap 
+    padding: 0 0px
+
+  .industry__slide
+    margin: 0 20px
+
+
+@media (max-width: 350px)
+  .industry__slide
+    margin: 0

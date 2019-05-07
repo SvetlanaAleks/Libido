@@ -98,6 +98,10 @@ a
 	line-height: 22px
 	cursor: pointer
 	text-align: center
+	transition: .4s
+	&:hover
+		background-color: #f25c3b
+		border-bottom: 5px solid #a2322a
 
 .line
 	width: 8px
@@ -109,14 +113,19 @@ a
 	top: 0
 	left: 50%
 	transform: translate(-50%, -50%)
+	+r(1023)
+		display: none
 	&-orange
 		background-color: #ef694b
 	&-advan
 		top: -10px
 	&-components
 		top: -10px
+	&-industry
+		top: -95px
 	&-order
 		top: -80px
+
 .overlay
 	position: absolute
 	width: 150%

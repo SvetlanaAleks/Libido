@@ -1,18 +1,15 @@
-$(".js-reviews-slider").slick({
+$(".js-industry-slider").slick({
   infinite: true,
   slidesToShow: 3,
-  dots: true,
-  prevArrow: $(".reviews__arrow-prev"),
-  nextArrow: $(".reviews__arrow-next"),
-  centerMode: true,
-  centerPadding: "0px",
-  slidesToScroll: 3,
+  slidesToScroll: 1,
+  prevArrow: $(".industry__arrow-prev"),
+  nextArrow: $(".industry__arrow-next"),
   responsive: [
     {
       breakpoint: 1024,
       settings: {
         slidesToShow: 2,
-        slidesToScroll: 2
+        slidesToScroll: 1
       }
     },
     {
@@ -26,18 +23,18 @@ $(".js-reviews-slider").slick({
 });
 
 $(document).ready(function() {
-  $(".reviews__button").click(function() {
+  $(".industry__button").click(function() {
     if ($(this).hasClass("open")) {
       $(this).text("+");
-      $(".reviews__more-text").slideUp();
+      $(".industry__more-text").slideUp();
       $(this).removeClass("open");
     } else {
-      $(".reviews__more-text").slideUp();
       $(this).text("-");
+      $(".industry__more-text").slideUp();
       $(this).removeClass("open");
       $(this)
         .parent()
-        .find(".reviews__more-text")
+        .find(".industry__more-text")
         .slideDown();
 
       $(this).addClass("open");
@@ -45,14 +42,14 @@ $(document).ready(function() {
   });
 });
 
-$(".js-reviews-slider").on("beforeChange", function(
+$(".js-industry-slider").on("beforeChange", function(
   event,
   slick,
   currentSlide,
   nextSlide
 ) {
-  $(".reviews__more-text").slideUp();
-  $(".reviews__button")
+  $(".industry__more-text").slideUp();
+  $(".industry__button")
     .removeClass("open")
     .text("+");
 });

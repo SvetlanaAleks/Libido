@@ -108,10 +108,10 @@
 
 @media screen and (max-width: 1189px) {
 	.order {
-		padding-top: 63px;
+		padding-top: 30px;
 		padding-bottom: 63px;
 		.title {
-			padding-top: 60px;
+			padding-top: 0px;
 		}
 		&__list {
 			justify-content: space-between;
@@ -171,7 +171,7 @@
 	.order {
 		background-color: #000;
 		.title {
-			padding-top: 55px;
+			padding-top: 0px;
 		}
 		&__list {
 			justify-content: space-around;
@@ -220,7 +220,7 @@
 	.order {
 
 		.title {
-			padding-top: 50px;
+			padding-top: 0px;
 		}
 		&__list {
 			margin-top: 10px;

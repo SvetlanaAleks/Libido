@@ -257,8 +257,24 @@
       letter-spacing: -2px;
     }
     &--old {
+      position: relative;
       font-size: 28px;
       letter-spacing: -1.4px;
+      &::before,
+      &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        width: calc(100% + 6px);
+        height: 1px;
+        background-color: #ef694b;
+        top: 50%;
+        left: 2px;
+        transform: translateY(-50%) rotate(20deg);
+      }
+      &::after {
+        transform: translateY(-50%) rotate(-20deg);
+      }
     }
   }
 
