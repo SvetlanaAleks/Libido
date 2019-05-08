@@ -24,21 +24,9 @@ $(".js-industry-slider").slick({
 
 $(document).ready(function() {
   $(".industry__button").click(function() {
-    if ($(this).hasClass("open")) {
-      $(this).text("+");
-      $(".industry__more-text").slideUp();
-      $(this).removeClass("open");
-    } else {
-      $(this).text("-");
-      $(".industry__more-text").slideUp();
-      $(this).removeClass("open");
-      $(this)
-        .parent()
-        .find(".industry__more-text")
-        .slideDown();
-
-      $(this).addClass("open");
-    }
+    $(this)
+      .parent()
+      .toggleClass("active");
   });
 });
 
@@ -48,8 +36,5 @@ $(".js-industry-slider").on("beforeChange", function(
   currentSlide,
   nextSlide
 ) {
-  $(".industry__more-text").slideUp();
-  $(".industry__button")
-    .removeClass("open")
-    .text("+");
+  $(".industry__slide").removeClass("active");
 });
