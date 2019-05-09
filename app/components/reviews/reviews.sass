@@ -8,7 +8,6 @@
 
 .reviews__title
   margin-bottom: 35px
-  line-height: 1.1
   font-weight: 900
   +r(1189)
     margin-bottom: 30px
@@ -17,10 +16,6 @@
 .reviews .slick-slide
   padding-top: 25px
   padding-bottom: 20px
-
-.reviews__title
-  font-weight: 900
-  line-height: 1
 
 
 .reviews__photo
@@ -146,8 +141,8 @@
   font-size: 0
   line-height: 0
   display: block
-  width: 20px
-  height: 20px
+  width: 18px
+  height: 18px
   padding: 5px
   cursor: pointer
   color: transparent
@@ -198,9 +193,10 @@
   height: 0
   border-left: 7px solid transparent
   border-right: 7px solid transparent
-  border-bottom: 9px solid #ef694b
-  top: -5px
-  left: 2px
+  border-bottom: 8px solid #ef694b
+  top: -4px
+  left: 50%
+  transform: translateX(-50%)
 
 .reviews .slick-dots li:hover 
   background-color: #c1b9b9
@@ -229,10 +225,10 @@
 
 
 
-.reviews__arrow-icon
+.reviews__arrow-icon path
   fill: #6e6a6a
 
-.reviews__arrow-icon:hover
+.reviews__arrow-icon:hover path
   fill: #ef694b
 
 .reviews__wrap
