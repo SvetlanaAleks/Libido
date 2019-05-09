@@ -109,7 +109,7 @@
   background: -webkit-linear-gradient(0deg, rgba(52,52,52,1) 33%, rgba(52,52,52,0) 100%)
   background: linear-gradient(0deg, rgba(52,52,52,1) 33%, rgba(52,52,52,0) 100%)
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#343434",endColorstr="#343434",GradientType=1)
-  height: 30px
+  height: 50px
 
 .industry__slide.active .industry__text
   max-height: 100%
@@ -185,7 +185,13 @@
 .industry__arrow-icon:hover
   fill: #ef694b
 
-
+.slick-counter2
+  display: none
+  font-size: 22px
+  text-align: center
+  margin: 25px 0
+  color: #fff
+  font-weight: 500
 
 @media (max-width: 1189px)
   .industry__text
@@ -242,6 +248,11 @@
 
   .industry__head
     padding-top: 150px  
+
+
+@media (max-width: 480px)
+  .slick-counter2
+    display: block
 
 @media (max-width: 420px)
   .industry__arrows

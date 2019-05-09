@@ -135,9 +135,9 @@
   left: 0
   width: 20px
   height: 20px
-  content: '•'
+  content: ''
   text-align: center
-  opacity: .25
+  opacity: 0
   color: black
   -webkit-font-smoothing: antialiased
   -moz-osx-font-smoothing: grayscale
@@ -198,7 +198,7 @@
   height: 0
   border-left: 7px solid transparent
   border-right: 7px solid transparent
-  border-bottom: 8px solid #ef694b
+  border-bottom: 9px solid #ef694b
   top: -5px
   left: 2px
 
@@ -260,6 +260,19 @@
 .show-1024
   display: none
 
+
+.slick-counter
+  display: none
+  font-size: 22px
+  text-align: center
+  margin: 25px 0
+  color: #fff
+  font-weight: 500
+  
+
+.reviews__slide-short .reviews__text:after
+  display: none
+
 @media (max-width: 1360px)
   .reviews__arrow
     width: 45px
@@ -305,6 +318,22 @@
 
   
 @media (max-width: 1024px)
+  .reviews .slick-active
+    margin-top: 0px
+
+  .reviews__short-text-1024:after
+    position: absolute
+    content: ""
+    bottom: 0
+    width: 100%
+    left: 0
+    right: 0
+    background: #4d4c4c
+    background: -webkit-gradient(linear,left bottom,left top,color-stop(24%,#4d4c4c),to(rgba(77,76,76,0)))
+    background: linear-gradient(0deg,#4d4c4c 24%,rgba(77,76,76,0) 100%)
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#4d4c4c",endColorstr="#4d4c4c",GradientType=1)
+    height: 30px
+
   .show-1024
     display: flex
 
@@ -320,6 +349,9 @@
     margin: 0 5px !important
 
 @media (max-width: 768px)
+  .reviews__text
+    max-height: 190px !important
+
   .reviews__slide
     max-width: 350px
     margin: 0 auto
@@ -342,6 +374,10 @@
 @media (max-width: 480px)
   .reviews__text
     font-size: 17px
+
+  .slick-counter
+    display: block
+    
 
 @media (max-width: 420px)
 
