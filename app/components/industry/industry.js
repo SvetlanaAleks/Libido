@@ -1,14 +1,17 @@
 $(".js-industry-slider")
   .on("init", function(event, slick) {
-    $(this).append(
-      '<div class="slick-counter2"><span class="current2"></span> / <span class="total2"></span></div>'
-    );
+    $(this)
+      .parent()
+      .append(
+        '<div class="slick-counter2"><span class="current2"></span> / <span class="total2"></span></div>'
+      );
     $(".current2").text(slick.currentSlide + 1);
     $(".total2").text(slick.slideCount);
   })
   .slick({
     infinite: true,
     slidesToShow: 3,
+
     slidesToScroll: 1,
     prevArrow: $(".industry__arrow-prev"),
     nextArrow: $(".industry__arrow-next"),
@@ -24,6 +27,14 @@ $(".js-industry-slider")
         breakpoint: 768,
         settings: {
           slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+
           slidesToScroll: 1
         }
       }
