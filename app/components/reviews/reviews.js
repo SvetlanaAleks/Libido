@@ -1,8 +1,10 @@
 $(".js-reviews-slider")
   .on("init", function(event, slick) {
-    $(this).append(
-      '<div class="slick-counter"><span class="current"></span> / <span class="total"></span></div>'
-    );
+    $(this)
+      .parent()
+      .append(
+        '<div class="slick-counter"><span class="current"></span> / <span class="total"></span></div>'
+      );
     $(".current").text(slick.currentSlide + 1);
     $(".total").text(slick.slideCount);
   })

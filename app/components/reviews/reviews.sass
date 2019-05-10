@@ -73,15 +73,6 @@
   height: 30px
 
 
-.slick-center .reviews__text
-  max-height: 280px
-  // transition: all 0.5s ease
-
-.reviews__slide.active .reviews__text
-  max-height: 100%
-
-.reviews__slide.active .reviews__text:after
-  display: none
 
 .reviews__slide
   position: relative
@@ -269,6 +260,20 @@
 .reviews__slide-short .reviews__text:after
   display: none
 
+
+.slick-center .reviews__text
+  max-height: 280px
+
+ 
+.reviews__slide.active .reviews__text
+  max-height: 100%
+
+.reviews__slide.active .reviews__text:after
+  display: none
+
+.reviews__slide-short.active .reviews__short-text-1024:after
+  display: none
+
 @media (max-width: 1360px)
   .reviews__arrow
     width: 45px
@@ -346,7 +351,10 @@
 
 @media (max-width: 768px)
   .reviews__text
-    max-height: 190px !important
+    max-height: 190px
+
+  .slick-center .reviews__text
+    max-height: 190px
 
   .reviews__slide
     max-width: 350px
@@ -391,4 +399,3 @@
     padding: 0
 
 
- 
