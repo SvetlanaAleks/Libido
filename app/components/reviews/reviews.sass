@@ -71,6 +71,8 @@
   background: linear-gradient(0deg, rgba(77,76,76,1) 24%, rgba(77,76,76,0) 100%)
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#4d4c4c",endColorstr="#4d4c4c",GradientType=1)
   height: 30px
+  +r(479)
+    height: 60px
 
 
 
@@ -239,6 +241,8 @@
   // transition: all 0.5s ease
   transform: scale(0.9)
   margin-top: 30px
+  +r(1023)
+    transform: scale(1)
 
 .reviews .slick-center
   transition: all 0.5s ease
@@ -325,11 +329,7 @@
   
 @media (max-width: 1024px)
 
-  .reviews .slick-active
-    transform: scale(0)
- 
-  .reviews .slick-center
-    transform: scale(0)
+
 
   .reviews .slick-active
     margin-top: 0px
@@ -389,7 +389,7 @@
 
 @media (max-width: 640px)
   .reviews .slick-dots
-    margin-top: 0
+    margin-top: 15px
 
   .reviews__text
     font-size: 17px

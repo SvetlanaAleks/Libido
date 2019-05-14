@@ -66,6 +66,11 @@
 		margin-bottom: 0;
 	}
 }
+@include r(1023) {
+	.footer {
+		padding-bottom: 30px;
+	}
+}
 
 @include r(1023) {
 	.footer {
