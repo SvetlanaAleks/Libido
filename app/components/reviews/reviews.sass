@@ -241,7 +241,7 @@
 
 .reviews .slick-active
   transition: all 0.5s ease
-  transform: scale(0.9) translateY(30px)
+  //transform: scale(0.9) translateY(30px)
   //margin-top: 30px
   +r(1023)
     transform: scale(1)
@@ -368,7 +368,7 @@
     max-height: 200px
 
   .slick-center .reviews__text
-    max-height: 210px
+    max-height: 220px
 
   .reviews__slide
     max-width: 350px
@@ -381,13 +381,18 @@
     width: 35px
 
   .reviews__arrow-prev
-    left: 60px
+    left: 20px
 
   .reviews__arrow-next 
+    right: 20px
+
+
+@media (max-width: 767px)
+  .reviews__arrow-prev
+    left: 60px
+
+  .reviews__arrow-next
     right: 60px
-
-
-
 
 @media (max-width: 640px)
   .reviews .slick-dots
