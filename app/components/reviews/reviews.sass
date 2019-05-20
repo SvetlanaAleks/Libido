@@ -153,6 +153,8 @@
   border-radius: 50%
   background: #6e6a6a
   cursor: pointer
+  transform: none
+  transition: 0s
 
 .reviews .slick-dots
   position: relative
@@ -238,15 +240,15 @@
   right: -80px
 
 .reviews .slick-active
-  // transition: all 0.5s ease
-  transform: scale(0.9)
-  margin-top: 30px
+  transition: all 0.5s ease
+  transform: scale(0.9) translateY(30px)
+  //margin-top: 30px
   +r(1023)
     transform: scale(1)
 
 .reviews .slick-center
   transition: all 0.5s ease
-  transform: scale(1)
+  transform: scale(1) translateY(0px)
   margin-top: 0px
 
   
